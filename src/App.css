@@ -5,3 +5,115 @@
   /* outline: 1px solid red; */
 }
 
+body {
+  background-color: rgb(51, 51, 51);
+}
+
+/*! NAVBAR / SEARCH BAR / HEADER */
+
+.navbar {
+  position: relative;
+  height: 350px;
+  display: block;
+  background-image:
+    linear-gradient(to bottom,
+      rgba(11, 11, 97, 0.8) 0%,
+      rgba(51, 51, 51, 1) 80%),
+    url("./images/movies-banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar-brand {
+  z-index: 100;
+}
+
+.navbar-nav {
+  flex-direction: row;
+  font-size: 1.25rem;
+  --bs-nav-link-color: rgba(255 215 0 / 100%);
+  font-weight: 500;
+  z-index: 100;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 1rem;
+}
+
+.input__col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+
+.input__row h1 {
+  /* text-align: center; */
+  color: whitesmoke;
+  margin-bottom: 1.5rem;
+}
+
+.search__input--wrapper {
+  position: relative;
+  /* width: clamp(260px, 1rem + 60vw, 450px); */
+  /* overflow: hidden; */
+}
+
+.search__input {
+  background-color: rgba(255 215 0 / 60%);
+  color: rgba(255, 255, 211, 1);
+  border-radius: 50px;
+  width: 450px;
+  height: 50px;
+  font-size: 1.5rem;
+  padding-left: 20px;
+  outline: none;
+  border: 2px solid transparent;
+  transition: all 0.25s ease-in-out;
+  /* box-shadow: 3px 3px 10px 0px black; */
+}
+
+.search__input::placeholder {
+  color: rgba(255 255 211 / 100%);
+  transition: all 0.3 ease-in-out;
+}
+
+.search__input:hover {
+  background-color: rgba(255 215 0 / 80%);
+  color: rgba(255 255 211 / 100%);
+}
+
+.search__input:hover::placeholder {
+  color: rgba(255 255 211 / 100%);
+}
+
+.search__input:focus {
+  background-color: rgba(255 215 0 / 80%);
+  color: rgba(255 255 211 / 100%);
+}
+
+.search__input:focus::placeholder {
+  color: rgba(239, 5, 5, 0);
+}
+
+.search__icon {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  color: rgba(0, 0, 75, 1);
+  transition: all 0.3s ease-in-out;
+  font-size: 2rem;
+}
+
+.search__icon:hover {
+  color: rgba(255 255 211 / 100%);
+  /* transform: scale(1.1); */
+}
+
+/*! MAIN */
+
+.test {
+  color: whitesmoke;
+  font-size: 2rem;
+}
