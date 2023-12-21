@@ -1,32 +1,35 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 import logo from "../images/F4U-gold_1.png";
 
 const Navbar = () => {
 	return (
-		<>
 			<nav className="navbar">
 				<div className="container">
-					<a className="navbar-brand" href="#">
+					<Link className="navbar-brand" to="/">
 						<img src={logo} alt="" width="60px" />
-					</a>
+					</Link>
 
 					<ul className="navbar-nav">
 						<li className="nav-item">
-							<a className="nav-link" aria-current="page" href="#">
+							<Link className="nav-link" to="/">
 								Home
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#">
-								Features
-							</a>
+							<Link className="nav-link" to="/movies">
+								Movies
+							</Link>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#">
-								Pricing
-							</a>
+							<Link className="nav-link" to="/">
+								Login
+							</Link>
 						</li>
 					</ul>
 				</div>
+
 				<div className="row input__row">
 					<div className="col input__col">
 						<h1>Browse our movies</h1>
@@ -35,18 +38,16 @@ const Navbar = () => {
 								type="text"
 								placeholder="Search here..."
 								className="search__input"
-								onchange="onSearch(event)"
+								// onchange="onSearch(event)"
 							/>
-							<a href="#main__section" className="search__icon">
-								<i
-									className="fa-solid fa-magnifying-glass"
-									onclick="onSearchIcon()"></i>
-							</a>
+							<i
+								className="fa-solid fa-magnifying-glass search__icon"
+								// onclick="onSearchIcon()"
+							></i>
 						</div>
 					</div>
 				</div>
 			</nav>
-		</>
 	);
 };
 
