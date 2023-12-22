@@ -122,23 +122,42 @@ html {
 
 /*! MAIN */
 
-.home__col {
+#home .col {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 90vh;
-  margin-top: -10rem;
-  z-index: 100;
+  min-height: 50vh;
+  margin-bottom: 5rem;
+  margin-top: -2rem;
+  /* z-index: 100; */
 }
 
-.home__col h2 {
+#home .col h2 {
   color: whitesmoke;
 }
 
-.home__col .movie {
+#home .col h2 .movie {
   color: rgba(255 215 0 / 100%);
   text-decoration: none;
+}
+
+/*! MOVIES */
+
+#movies .col {
+  min-height: 50vh;
+  margin-bottom: 5rem;
+  margin-top: -2rem;
+  /* z-index: 100; */
+}
+
+/*! MOVIES INFO */
+
+#movies-info .col {
+  min-height: 50vh;
+  margin-bottom: 5rem;
+  margin-top: -2rem;
+  /* z-index: 100; */
 }
 
 /*! FOOTER */
@@ -151,6 +170,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* position: sticky; */
+  /* bottom: 0px; */
 }
 
 footer p {

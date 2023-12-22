@@ -2,7 +2,11 @@ import React from "react"
 
 const MovieInfo = () => {
   return (
-    <div className="test">MovieInfo</div>
+    <div className="container test" id="movies-info">
+      <div className="row">
+        <div className="col">Test</div>
+      </div>
+    </div>
   )
 }
 
