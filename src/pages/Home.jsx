@@ -1,16 +1,13 @@
 import React from "react";
 
-import cinema from "../images/home_cinema-gold.svg";
+import HomeImage from "../components/HomeImage";
 
 const Home = () => {
 	return (
 		<div className="container" id="home">
 			<div className="row">
 				<div className="col">
-					<img className="" src={cinema} alt="" width="250px" />
-					<h2>
-						Let's watch a <a className="movie" href="#">Movie!</a>
-					</h2>
+					<HomeImage />
 				</div>
 			</div>
 		</div>

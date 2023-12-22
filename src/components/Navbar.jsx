@@ -36,7 +36,7 @@ const Navbar = () => {
 					<div className="search__input--wrapper">
 						<input
 							type="text"
-							placeholder="Search here..."
+							placeholder="Title..."
 							className="search__input"
 							// onchange="onSearch(event)"
 						/>
