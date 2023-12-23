@@ -154,7 +154,9 @@ html {
   /* z-index: 100; */
 }
 
-#movies .card-img-top {
+/*! RESULTS  */
+
+#results .card-img-top {
   width: 100%;
   height: 400px;
   background-position: center;
@@ -162,7 +164,7 @@ html {
   background-repeat: no-repeat;
 }
 
-#movies ul li {
+#results ul li {
   color: whitesmoke;
   background-color: #333;
 }

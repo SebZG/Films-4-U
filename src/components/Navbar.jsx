@@ -4,16 +4,16 @@ import { useNavigate, Link } from "react-router-dom";
 import logo from "../images/F4U-gold_1.png";
 
 const Navbar = () => {
-	const [text, setText] = useState("");
+	const [searchQuery, setSearchQuery] = useState("");
 	const navigate = useNavigate();
 
 	const handleInputChange = (event) => {
-		setText(event.target.value);
+		setSearchQuery(event.target.value);
 	};
 
 	const handleSearch = (event) => {
 		event.preventDefault();
-		navigate("/movies");
+		navigate(`/movies?search=${searchQuery}`);
 	};
 
 	return (
@@ -30,7 +30,7 @@ const Navbar = () => {
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link className="nav-link" to="/movies">
+						<Link className="nav-link" to={`/movies?search=${searchQuery}`}>
 							Movies
 						</Link>
 					</li>
@@ -49,9 +49,9 @@ const Navbar = () => {
 						<form onSubmit={(e) => handleSearch(e)}>
 							<input
 								className="search__input"
-								type="text"
+								type="searchQuery"
 								placeholder="Title..."
-								value={text}
+								value={searchQuery}
 								onChange={(e) => handleInputChange(e)}
 								onKeyUp={(e) => handleInputChange(e)}
 							/>

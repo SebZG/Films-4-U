@@ -1,22 +1,17 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
-import harry from "../images/harry.jpg";
+import Results from "../components/Results";
 
 const Movies = () => {
+	const location = useLocation();
+	const searchQuery = new URLSearchParams(location.search).get("search");
+
 	return (
 		<div className="container" id="movies">
 			<div className="row">
 				<div className="col">
-					<div className="card" id="movies" style={{ width: "18rem" }}>
-						<div
-							className="card-img-top"
-							alt="Movie"
-							style={{ backgroundImage: `url(${harry})` }}></div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item">Title</li>
-							<li class="list-group-item">Year</li>
-						</ul>
-					</div>
+					<Results searchQuery={searchQuery} />
 				</div>
 			</div>
 		</div>
