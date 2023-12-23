@@ -11,8 +11,7 @@ const Movies = () => {
 						<div
 							className="card-img-top"
 							alt="Movie"
-							style={{ backgroundImage: `url(${harry})` }}>
-						</div>
+							style={{ backgroundImage: `url(${harry})` }}></div>
 						<ul class="list-group list-group-flush">
 							<li class="list-group-item">Title</li>
 							<li class="list-group-item">Year</li>
