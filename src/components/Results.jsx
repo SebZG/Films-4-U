@@ -25,7 +25,7 @@ const Results = ({ searchQuery }) => {
 		} finally {
 			setTimeout(() => {
 				setLoading(false);
-			}, 1000);
+			}, 1500);
 		}
 	}
 
@@ -40,15 +40,15 @@ const Results = ({ searchQuery }) => {
 			) : loading ? (
 				new Array(8).fill(0).map((_, index) => (
 					<div key={index} className="card skeleton">
-						<div className="card-img-top" alt="Movie">
-							<div className="poster__skeleton"></div>
+						<div className="card-img-top placeholder-glow" alt="Movie">
+							<div className="poster__skeleton placeholder"></div>
 						</div>
 						<ul className="list-group list-group-flush">
-							<li className="list-group-item">
-								<div className="title__skeleton"></div>
+							<li className="list-group-item placeholder-glow">
+								<div className="title__skeleton placeholder"></div>
 							</li>
-							<li className="list-group-item">
-								<div className="year__skeleton"></div>
+							<li className="list-group-item placeholder-glow">
+								<div className="year__skeleton placeholder"></div>
 							</li>
 						</ul>
 					</div>
