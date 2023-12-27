@@ -40,7 +40,7 @@ html {
 }
 
 .navbar-brand {
-  z-index: 100;
+  /* z-index: 100; */
 }
 
 .navbar-nav {
@@ -49,7 +49,7 @@ html {
   --bs-nav-link-color: rgba(255 215 0 / 100%);
   --bs-nav-link-hover-color: whitesmoke;
   font-weight: 500;
-  z-index: 100;
+  /* z-index: 100; */
 }
 
 .navbar-nav .nav-item {
@@ -60,7 +60,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 100;
+  /* z-index: 100; */
 }
 
 .input__row h1 {
@@ -72,7 +72,6 @@ html {
 .search__input--wrapper {
   position: relative;
   /* width: clamp(260px, 1rem + 60vw, 450px); */
-  /* overflow: hidden; */
 }
 
 .search__input {
@@ -115,8 +114,8 @@ html {
 
 .search__icon {
   position: absolute;
-  top: 8px;
-  right: 20px;
+  top: 10px;
+  right: 15px;
   color: rgba(0, 0, 75, 1);
   transition: all 0.3s ease-in-out;
   font-size: 2rem;
@@ -132,17 +131,25 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* margin-bottom: 7rem; */
 }
 
 /*! HomeImage */
 
-#home__img h2 {
+#home__img--wrapper {
+  margin-bottom: 10rem;
+}
+
+.cinema {
+  width: 250px;
+}
+
+#home__img--wrapper h2 {
   color: whitesmoke;
 }
 
-#home__img h2 .movie {
+#home__img--wrapper h2 .movie {
   color: rgba(255 215 0 / 100%);
   text-decoration: none;
 }
@@ -154,11 +161,20 @@ html {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  min-height: 100vh;
-  /* margin-bottom: 7rem; */
+  /* min-height: 100vh; */
+  margin-bottom: 7rem;
 }
 
 /*! RESULTS  */
+
+.horror {
+  margin: 6rem 0;
+  width: 300px;
+}
+
+.errorMessage {
+  color: whitesmoke;
+}
 
 #results {
   display: flex;
@@ -189,7 +205,7 @@ html {
 
 .results .card-img-top {
   width: 100%;
-  height:100%;
+  height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -242,6 +258,38 @@ html {
   width: 30%;
 }
 
+#results__wrapper {
+  width: 100%;
+}
+
+/*! SortBar */
+
+#sortBar {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+#sort {
+  border-radius: 0.5rem;
+  border: 0;
+}
+
+#sort option {
+  /* border-radius: 1rem; */
+  border: 0;
+}
+
+#searchTerm {
+  color: whitesmoke;
+}
+
+#searchTerm span {
+  color: rgba(255 215 0 / 100%);
+  margin-left: 1rem;
+}
+
 /*! MOVIES INFO */
 
 #movieInfo .col {
@@ -256,16 +304,14 @@ html {
 /*! FOOTER */
 
 footer {
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   background-color: rgba(11, 11, 97, 1);
   color: whitesmoke;
-  height: 80px;
-  border-top: 1px solid rgba(255, 215, 0, 1);
+  height: 70px;
+  border-top: 1px solid rgb(255, 215, 0);
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: sticky; */
-  /* bottom: 0px; */
 }
 
 footer p {
