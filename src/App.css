@@ -10,8 +10,15 @@
   font-size: 2rem;
 }
 
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   background-color: rgb(51, 51, 51);
+
 }
 
 html {
@@ -57,20 +64,23 @@ html {
 }
 
 .input__col {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: center; */
+  margin: 0 auto;
   /* z-index: 100; */
 }
 
 .input__row h1 {
-  /* text-align: center; */
+  text-align: center;
   color: whitesmoke;
   margin-bottom: 1.5rem;
 }
 
 .search__input--wrapper {
   position: relative;
+  width: 100%;
   /* width: clamp(260px, 1rem + 60vw, 450px); */
 }
 
@@ -78,7 +88,7 @@ html {
   background-color: rgba(255 215 0 / 60%);
   color: rgba(255, 255, 211, 1);
   border-radius: 50px;
-  width: 450px;
+  width: 100%;
   height: 50px;
   font-size: 1.5rem;
   padding-left: 20px;
@@ -131,14 +141,13 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* min-height: 100vh; */
-  /* margin-bottom: 7rem; */
+  margin-bottom: 7rem;
 }
 
 /*! HomeImage */
 
 #home__img--wrapper {
-  margin-bottom: 10rem;
+  margin: 5rem 0;
 }
 
 .cinema {
@@ -157,18 +166,17 @@ html {
 /*! MOVIES */
 
 #movies .col {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  /* min-height: 100vh; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-evenly; */
+  /* align-items: center; */
   margin-bottom: 7rem;
 }
 
 /*! RESULTS  */
 
 .horror {
-  margin: 6rem 0;
+  margin: 5rem 0;
   width: 300px;
 }
 
@@ -186,7 +194,7 @@ html {
 .card {
   background-color: rgba(245, 245, 245, 0.25);
   box-shadow: 3px 3px 10px 0px;
-  --bs-card-border-radius: 1.5rem;
+  --bs-card-border-radius: 1.25rem;
   overflow: hidden;
   margin: 2.5rem 2rem;
   width: 250px;
@@ -293,18 +301,17 @@ html {
 /*! MOVIES INFO */
 
 #movieInfo .col {
-  display: flex;
+  /* display: flex; */
   /* flex-direction: column; */
-  justify-content: center;
-  align-items: center;
-  min-height: 50vh;
-  margin-bottom: 5rem;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin-bottom: 7rem;
 }
 
 /*! FOOTER */
 
 footer {
-  /* margin-top: 5rem; */
+  margin-top: auto;
   background-color: rgba(11, 11, 97, 1);
   color: whitesmoke;
   height: 70px;
@@ -312,6 +319,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* position: relative;
+  bottom: 0;
+  width: 100%; */
 }
 
 footer p {

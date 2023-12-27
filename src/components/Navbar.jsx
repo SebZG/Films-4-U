@@ -43,7 +43,7 @@ const Navbar = () => {
 			</div>
 
 			<div className="row g-0 input__row">
-				<div className="col input__col">
+				<div className="col-8 col-sm-6 col-md-6 col-lg-5 col-xl-4 input__col">
 					<h1>Browse our movies</h1>
 					<div className="search__input--wrapper">
 						<form onSubmit={(e) => handleSearch(e)}>

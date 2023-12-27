@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import HomeImage from "./HomeImage";
-
 import horror from "../images/undraw_horror_movie_3988.svg"
 
 const Results = ({ searchQuery }) => {
