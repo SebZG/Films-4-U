@@ -5,19 +5,24 @@
   /* outline: 1px solid red; */
 }
 
+/*! GENERAL  */
+
 .test {
   color: whitesmoke;
   font-size: 2rem;
 }
 
+/* for footer to stay at bottom */
 .App {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+/*-----------------------------*/
+
 body {
-  background-color: rgb(51, 51, 51);
+  background-color: #333333;
 
 }
 
@@ -28,6 +33,10 @@ html {
 ::selection {
   background-color: rgba(255 215 0 / 80%);
   color: black;
+}
+
+.nowrap {
+  text-wrap: nowrap;
 }
 
 /*! NAVBAR / SEARCH BAR / HEADER */
@@ -46,17 +55,12 @@ html {
   background-size: cover;
 }
 
-.navbar-brand {
-  /* z-index: 100; */
-}
-
 .navbar-nav {
   flex-direction: row;
   font-size: 1.25rem;
   --bs-nav-link-color: rgba(255 215 0 / 100%);
   --bs-nav-link-hover-color: whitesmoke;
   font-weight: 500;
-  /* z-index: 100; */
 }
 
 .navbar-nav .nav-item {
@@ -69,7 +73,6 @@ html {
   justify-content: center;
   align-items: center; */
   margin: 0 auto;
-  /* z-index: 100; */
 }
 
 .input__row h1 {
@@ -81,7 +84,6 @@ html {
 .search__input--wrapper {
   position: relative;
   width: 100%;
-  /* width: clamp(260px, 1rem + 60vw, 450px); */
 }
 
 .search__input {
@@ -191,7 +193,7 @@ html {
   flex-wrap: wrap;
 }
 
-.card {
+#results .card {
   background-color: rgba(245, 245, 245, 0.25);
   box-shadow: 3px 3px 10px 0px;
   --bs-card-border-radius: 1.25rem;
@@ -199,6 +201,17 @@ html {
   margin: 2.5rem 2rem;
   width: 250px;
   height: 400px;
+  cursor: pointer;
+}
+
+#card-results {
+  transition: all 0.25s ease-in-out;
+}
+
+#card-results:hover {
+  transform: scale(1.05);
+  border-color: rgba(245, 245, 245, 0.5);
+  box-shadow: 3px 3px 10px 5px;
 }
 
 .card>.list-group {
@@ -225,7 +238,7 @@ html {
   text-align: center;
 }
 
-/*! Skeleton Load  */
+/*! Results Skeleton Load  */
 
 .skeleton .card-img-top,
 .skeleton ul li {
@@ -266,10 +279,6 @@ html {
   width: 30%;
 }
 
-#results__wrapper {
-  width: 100%;
-}
-
 /*! SortBar */
 
 #sortBar {
@@ -293,7 +302,7 @@ html {
   color: whitesmoke;
 }
 
-#searchTerm span {
+#searchTerm .searchQuery {
   color: rgba(255 215 0 / 100%);
   margin-left: 1rem;
 }
@@ -301,11 +310,149 @@ html {
 /*! MOVIES INFO */
 
 #movieInfo .col {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 7rem;
+}
+
+#movieInfo .card {
+  background-color: rgba(245, 245, 245, 0.25);
+  box-shadow: 3px 3px 10px 0px;
+  --bs-card-border-radius: 1.25rem;
+  overflow: hidden;
+  width: 70%;
+  height: 100%;
+}
+
+.infoTitle__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#movieInfo .img-fluid {
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+.movie__rating span {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.movie__rating .white {
+  color: whitesmoke;
+}
+
+.movie__rating .total {
+  color: rgba(245, 245, 245, 0.5);
+}
+
+.fa-star {
+  color: rgba(255 215 0 / 100%);
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+#movieInfo .card-body {
+  color: whitesmoke;
+  padding: 1rem;
+}
+
+#movieInfo .card-body .ratingsInfo__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+
+#movieInfo .card-body .yearRatingRuntime {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+#movieInfo .yearRatingRuntime span {
+  height: 0.5rem;
+  width: 0.5rem;
+  display: inline-block;
+  background-color: rgba(245, 245, 245, 0.5);
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  margin-top: 0.2rem;
+}
+
+#movieInfo .movie__rating {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+#movieInfo .card-body .text-body-secondary {
+  --bs-secondary-color: rgba(245, 245, 245, 0.5);
+  text-wrap: nowrap;
+}
+
+#movieInfo .card-body .plot {
+  width: 75%;
+  font-size: 1.25rem;
+  margin-bottom: 12%;
+}
+
+#movieInfo .card-body .genre {
+  font-size: 1.25rem;
+  border: 1px solid rgba(245, 245, 245, 0.5);
+  display: inline;
+  padding: 0.75rem;
+  border-radius: 25px;
+  box-shadow: 1px 1px 5px 0 #333;
+}
+
+/*! NovieInfo Skeleton */
+
+#movieInfo .skeleton .img-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#movieInfo .poster__skeleton,
+#movieInfo .h3-skeleton,
+#movieInfo .small-skeleton,
+#movieInfo .p-skeleton {
+  border-radius: 10px;
+}
+
+#movieInfo .poster__skeleton {
+  width: 90%;
+  height: 95%;
+  margin: auto;
+}
+
+#movieInfo .h3-skeleton {
+  width: 80%;
+}
+
+#movieInfo .small-skeleton {
+  width: 100%;
+  height: 100%;
+  margin-top: 2rem;
+}
+
+#movieInfo .p-skeleton {
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
 }
 
 /*! FOOTER */

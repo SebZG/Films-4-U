@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-import horror from "../images/undraw_horror_movie_3988.svg"
+import horror from "../images/undraw_horror_movie_3988.svg";
 
 const Results = ({ searchQuery }) => {
 	const [results, setResults] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
+	const navigate = useNavigate();
 
 	//! GET MOVIES
 	async function getMovies() {
@@ -47,7 +49,7 @@ const Results = ({ searchQuery }) => {
 		<div id="results__wrapper">
 			<div id="sortBar">
 				<h3 id="searchTerm">
-					Search Results For: <span>{searchQuery}</span>
+					Search Results <span className="nowrap">For: <span className="searchQuery">{searchQuery}</span></span>
 				</h3>
 				<select
 					id="sort"
@@ -62,7 +64,7 @@ const Results = ({ searchQuery }) => {
 			</div>
 			<div id="results">
 				{results.length === 0 ? (
-					<img className="horror" src={horror} alt=""/>
+					<img className="horror" src={horror} alt="" />
 				) : loading ? (
 					new Array(8).fill(0).map((_, index) => (
 						<div key={index} className="card skeleton">
@@ -83,7 +85,11 @@ const Results = ({ searchQuery }) => {
 					<div className="errorMessage">Error: {error}</div>
 				) : (
 					results.slice(0, 8).map((movie) => (
-						<div key={movie.imdbID} className="card results">
+						<div
+							key={movie.imdbID}
+							id="card-results"
+							className="card results"
+							onClick={() => navigate(`/movies/${movie.imdbID}`)}>
 							<div
 								className="card-img-top"
 								alt={movie.Title}
