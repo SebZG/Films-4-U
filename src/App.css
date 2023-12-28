@@ -427,9 +427,9 @@ html {
 }
 
 #movieInfo .poster__skeleton,
-#movieInfo .h3-skeleton,
-#movieInfo .small-skeleton,
-#movieInfo .p-skeleton {
+#movieInfo .h3__skeleton,
+#movieInfo .small__skeleton,
+#movieInfo .p__skeleton {
   border-radius: 10px;
 }
 
@@ -439,17 +439,18 @@ html {
   margin: auto;
 }
 
-#movieInfo .h3-skeleton {
+#movieInfo .h3__skeleton {
   width: 80%;
+  height: 100%;
 }
 
-#movieInfo .small-skeleton {
+#movieInfo .small__skeleton {
   width: 100%;
   height: 100%;
   margin-top: 2rem;
 }
 
-#movieInfo .p-skeleton {
+#movieInfo .p__skeleton {
   width: 100%;
   height: 100%;
   margin-top: 1rem;
@@ -466,9 +467,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: relative;
-  bottom: 0;
-  width: 100%; */
 }
 
 footer p {

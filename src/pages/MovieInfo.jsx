@@ -49,17 +49,17 @@ const MovieInfo = () => {
 										<div className="poster__skeleton placeholder"></div>
 									</div>
 								</div>
-								<div class="col-md-8">
+								<div className="col-md-8">
 									<div className="card-body placeholder-glow">
 										<div className="infoTitle__wrapper placeholder-glow">
-											<h3 className="card-title h3-skeleton placeholder"></h3>
+											<div className="card-title h3__skeleton placeholder"></div>
 										</div>
 										<p className="card-text yearRatingRuntime placeholder-glow">
-											<small className="text-body-secondary small-skeleton placeholder"></small>
-											<small className="text-body-secondary small-skeleton placeholder"></small>
-											<small className="text-body-secondary small-skeleton placeholder"></small>
+											<small className="text-body-secondary small__skeleton placeholder"></small>
+											<small className="text-body-secondary small__skeleton placeholder"></small>
+											<small className="text-body-secondary small__skeleton placeholder"></small>
 										</p>
-										<p className="card-text plot p-skeleton placeholder"></p>
+										<p className="card-text plot p__skeleton placeholder"></p>
 									</div>
 								</div>
 							</div>
@@ -77,7 +77,7 @@ const MovieInfo = () => {
 											backgroundImage: `url(${movieInfo.Poster})`,
 										}}></div>
 								</div>
-								<div class="col-md-8">
+								<div className="col-md-8">
 									<div className="card-body">
 										<div className="infoTitle__wrapper">
 											<h3 className="card-title">{movieInfo.Title}</h3>
@@ -97,7 +97,7 @@ const MovieInfo = () => {
 												</small>
 											</p>
 											<div className="movie__rating">
-												<i class="fa-solid fa-star"></i>
+												<i className="fa-solid fa-star"></i>
 												<span className="white">{movieInfo.imdbRating}</span>
 												<span className="total">/10</span>
 											</div>
