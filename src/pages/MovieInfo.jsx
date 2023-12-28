@@ -13,7 +13,7 @@ const MovieInfo = () => {
 		try {
 			setLoading(true);
 
-			const apiKEY = process.env.API_KEY;
+			const apiKEY = process.env.REACT_APP_API_KEY;
 			const apiURL = `https://www.omdbapi.com/?apikey=${apiKEY}&i=${id}`;
 
 			const { data } = await axios.get(apiURL);

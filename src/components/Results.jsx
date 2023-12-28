@@ -15,7 +15,7 @@ const Results = ({ searchQuery }) => {
 		try {
 			setLoading(true);
 
-			const apiKEY = process.env.API_KEY;
+			const apiKEY = process.env.REACT_APP_API_KEY;
 			const apiURL = `https://www.omdbapi.com/?apikey=${apiKEY}&s=${searchQuery}`;
 
 			const { data } = await axios.get(apiURL);
