@@ -5,6 +5,14 @@ A Reaect app that connects to an API and displays the queried search terms.
 [**Deployed App**](https://films-4-u.vercel.app/)
 
 ##
+### Technologies / Languages
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- React
+
+##
 ### Usage
 
 - Simply type in the search bar for your favourite movie.
